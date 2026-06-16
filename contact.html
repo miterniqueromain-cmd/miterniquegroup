@@ -394,83 +394,10 @@
       border:2px solid #000;
     }
 
-    .topbar{
-      position:fixed;
-      top:22px;
-      left:22px;
-      right:22px;
-      min-height:74px;
-      z-index:55;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      pointer-events:none;
-    }
-
-    .nav{
-      width:min(1180px, calc(100% - 20px));
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      padding:10px 12px;
-      border:1px solid rgba(212,162,31,.34);
-      border-radius:999px;
-      background:rgba(0,0,0,.56);
-      backdrop-filter:blur(14px);
-      box-shadow:0 16px 42px rgba(0,0,0,.45);
-      pointer-events:auto;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      text-decoration:none;
-      min-width:0;
-    }
-
-    .brand img{
-      width:240px;
-      max-width:44vw;
-      display:block;
-      filter:drop-shadow(0 8px 18px rgba(0,0,0,.55));
-    }
-
-    .links{
-      display:flex;
-      align-items:center;
-      justify-content:flex-end;
-      gap:7px;
-      flex-wrap:wrap;
-    }
-
-    .links a{
-      text-decoration:none;
-      color:rgba(248,237,216,.92);
-      font-family:'Cinzel',serif;
-      font-weight:800;
-      font-size:.76rem;
-      letter-spacing:.055em;
-      padding:9px 12px;
-      border:1px solid transparent;
-      border-radius:999px;
-      white-space:nowrap;
-      transition:background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
-    }
-
-    .links a:hover,
-    .links a:focus-visible,
-    .links a[aria-current="page"]{
-      background:rgba(212,162,31,.14);
-      border-color:rgba(212,162,31,.50);
-      color:#fff;
-      transform:translateY(-1px);
-      outline:none;
-    }
 
     .translate-bar{
       position:fixed;
-      top:28px;
+      top:26px;
       left:50%;
       transform:translateX(-50%);
       z-index:56;
@@ -510,7 +437,7 @@
     .container{
       width:min(1040px, calc(100% - 34px));
       margin:0 auto;
-      padding:184px 0 88px;
+      padding:118px 0 88px;
       min-height:100vh;
     }
 
@@ -814,33 +741,16 @@
     }
 
     @media (max-width: 920px){
-      .nav{
-        border-radius:22px;
-        align-items:flex-start;
-        flex-direction:column;
-      }
-      .brand img{width:220px;max-width:70vw}
-      .links{
-        width:100%;
-        justify-content:flex-start;
-        overflow-x:auto;
-        flex-wrap:nowrap;
-        padding-bottom:3px;
-      }
-      .translate-bar{top:145px}
-      .container{padding-top:220px}
+
+      .translate-bar{top:26px}
+      .container{padding-top:150px}
       .info-grid,.inline,.inline.three,.radio-group,.check-group{grid-template-columns:1fr}
     }
 
     @media (max-width: 620px){
       .frame-fixed{inset:10px;border-radius:20px}
       .viewport-scroll{inset:18px}
-      .topbar{top:18px;left:18px;right:18px}
-      .translate-bar{top:158px;border-radius:18px;flex-direction:column}
-      .container{width:min(100% - 22px, 1040px);padding-top:230px}
-      form,.header-card{padding:18px}
-      .btn{width:100%}
-    }
+
 
     @media (prefers-reduced-motion: reduce){
       html{scroll-behavior:auto}
@@ -1163,15 +1073,17 @@
   </div>
 
   <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'fr',
-        includedLanguages: 'fr,en,de,it,es,pt,nl',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-  </script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'fr',
+    includedLanguages: 'fr,en,de,it,es,pt,nl',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+</script>
+
+<!-- Google Translate -->
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
 </body>
 </html>
