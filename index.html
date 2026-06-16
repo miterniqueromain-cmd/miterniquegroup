@@ -413,13 +413,13 @@
     .viewport-scroll::-webkit-scrollbar-track{background:rgba(255,255,255,.03)}
     .viewport-scroll::-webkit-scrollbar-thumb{
       background:linear-gradient(var(--gold2), var(--gold));
-      border-radius:999px;
+      border-radius:0 0 18px 18px;
       border:2px solid #000;
     }
 
     .translate-bar{
       position:fixed;
-      top:28px;
+      top:0;
       left:50%;
       transform:translateX(-50%);
       z-index:76;
@@ -747,7 +747,7 @@
     @media (max-width: 920px){
       .page-tiles{grid-template-columns:1fr}
       .veil{padding-top:150px}
-      .translate-bar{top:86px;right:26px}
+      .translate-bar{top:0;right:auto}
     }
 
     @media (max-width: 620px){
@@ -852,3 +852,4 @@
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 </body>
 </html>
+
