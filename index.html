@@ -571,31 +571,21 @@ body::after{
       box-shadow:0 24px 70px rgba(75,61,35,.08);
     }
 
-    .logo-seal{
+    .logo-main{
       position:relative;
       display:grid;
       place-items:center;
-      width:min(335px, 68vw);
-      aspect-ratio:1;
-      border-radius:50%;
+      width:min(520px, 82vw);
       margin:8px auto 22px;
-      filter:drop-shadow(0 22px 46px rgba(75,61,35,.18));
+      filter:drop-shadow(0 18px 38px rgba(75,61,35,.16));
       animation:sealReveal 1100ms ease both;
     }
 
-    .logo-seal::before{
-      content:"";
-      position:absolute;
-      inset:-17px;
-      border-radius:50%;
-      border:1px solid rgba(185,138,24,.34);
-      box-shadow:
-        0 0 24px rgba(185,138,24,.15),
-        0 0 66px rgba(255,255,255,.50) inset;
-      animation:softPulse 4.8s ease-in-out infinite;
+    .logo-main img{
+      width:100%;
+      display:block;
+      border-radius:0;
     }
-
-    .logo-seal img{width:100%;display:block;border-radius:50%}
 
     @keyframes sealReveal{
       from{opacity:0;transform:scale(.92) translateY(18px)}
@@ -672,18 +662,13 @@ body::after{
       transition:transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
     }
 
-    .btn.gold{
-      color:#1d1b16;
-      background:linear-gradient(135deg, #f0d98e, var(--gold2));
-      box-shadow:0 16px 38px rgba(185,138,24,.18);
-      border:1px solid rgba(185,138,24,.36);
-    }
-
+    .btn.gold,
     .btn.dark{
-      color:#1d1b16;
-      background:rgba(255,255,255,.72);
-      border:1px solid rgba(185,138,24,.42);
-      backdrop-filter:blur(6px);
+      color:#174a7c;
+      background:rgba(255,255,255,.86);
+      border:1px solid rgba(185,138,24,.58);
+      box-shadow:0 12px 30px rgba(75,61,35,.10);
+      backdrop-filter:blur(8px);
     }
 
     .btn:hover,.btn:focus-visible{
@@ -803,6 +788,7 @@ body::after{
       .frame-fixed{inset:10px;border-radius:20px}
       .viewport-scroll{inset:18px}
       .hero-content{padding:22px 12px;border-radius:26px}
+      .logo-main{width:min(360px, 76vw)}
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -830,8 +816,8 @@ body::after{
     <main>
       <section class="veil" id="accueil" aria-label="Entrée du site Miternique Group">
         <div class="hero-content">
-          <div class="logo-seal">
-            <img src="logocir.PNG" alt="Logo circulaire officiel Miternique Group – Suisse France">
+          <div class="logo-main">
+            <img src="logo.PNG" alt="Logo officiel Miternique Group – Suisse France">
           </div>
 
           <div class="kicker">Suisse • France • Une même exigence</div>
