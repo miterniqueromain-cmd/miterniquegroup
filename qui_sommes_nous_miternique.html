@@ -304,21 +304,21 @@
       background-position:center;
       background-size:cover;
       background-repeat:no-repeat;
-      animation:bgFade 60s infinite;
+      animation:bgFade 180s infinite;
       filter:saturate(.96) contrast(1.02) brightness(1.08);
       transform:scale(1.035);
     }
 
     .bg-slideshow span:nth-child(1){background-image:url("salle1.jfif");animation-delay:0s}
-    .bg-slideshow span:nth-child(2){background-image:url("salle2.jfif");animation-delay:6s}
-    .bg-slideshow span:nth-child(3){background-image:url("salle3.jfif");animation-delay:12s}
-    .bg-slideshow span:nth-child(4){background-image:url("salle4.jfif");animation-delay:18s}
-    .bg-slideshow span:nth-child(5){background-image:url("salle5.jfif");animation-delay:24s}
-    .bg-slideshow span:nth-child(6){background-image:url("salle6.jfif");animation-delay:30s}
-    .bg-slideshow span:nth-child(7){background-image:url("salle7.jfif");animation-delay:36s}
-    .bg-slideshow span:nth-child(8){background-image:url("salle8.jfif");animation-delay:42s}
-    .bg-slideshow span:nth-child(9){background-image:url("salle9.jfif");animation-delay:48s}
-    .bg-slideshow span:nth-child(10){background-image:url("salle10.jfif");animation-delay:54s}
+    .bg-slideshow span:nth-child(2){background-image:url("salle2.jfif");animation-delay:18s}
+    .bg-slideshow span:nth-child(3){background-image:url("salle3.jfif");animation-delay:36s}
+    .bg-slideshow span:nth-child(4){background-image:url("salle4.jfif");animation-delay:54s}
+    .bg-slideshow span:nth-child(5){background-image:url("salle5.jfif");animation-delay:72s}
+    .bg-slideshow span:nth-child(6){background-image:url("salle6.jfif");animation-delay:90s}
+    .bg-slideshow span:nth-child(7){background-image:url("salle7.jfif");animation-delay:108s}
+    .bg-slideshow span:nth-child(8){background-image:url("salle8.jfif");animation-delay:126s}
+    .bg-slideshow span:nth-child(9){background-image:url("salle9.jfif");animation-delay:144s}
+    .bg-slideshow span:nth-child(10){background-image:url("salle10.jfif");animation-delay:162s}
 
     @keyframes bgFade{
       0%{opacity:0;transform:scale(1.035)}
@@ -531,28 +531,24 @@
 
     .btn.gold,
     .btn.dark{
-      color:#6f4f0e;
-      background:rgba(255,255,255,.54);
-      border:1px solid rgba(185,138,24,.30);
-      backdrop-filter:blur(8px);
-      box-shadow:0 12px 28px rgba(75,61,35,.08);
+      color:#1f4e8c;
+      background:rgba(255,255,255,.96);
+      border:2px solid #b98a18;
+      backdrop-filter:blur(6px);
+      box-shadow:0 10px 25px rgba(185,138,24,.10);
     }
 
-    .btn.gold::after,
-    .btn.dark::after{
-      content:"›";
-      margin-left:10px;
-      color:#9a6d12;
-      font-size:1.15rem;
-      line-height:1;
-    }
-
+    .btn.gold:hover,
+    .btn.gold:focus-visible,
+    .btn.dark:hover,
+    .btn.dark:focus-visible,
     .btn:hover,
     .btn:focus-visible{
+      color:#143a69;
+      background:#ffffff;
+      border-color:#d7ad45;
       transform:translateY(-2px);
-      background:rgba(255,255,255,.82);
-      border-color:rgba(185,138,24,.58);
-      box-shadow:0 16px 34px rgba(75,61,35,.14);
+      box-shadow:0 16px 35px rgba(185,138,24,.18);
       outline:none;
     }
 
@@ -649,14 +645,14 @@
     }
 
     .bottom-nav{
-      width:min(960px, 100%);
-      margin:22px auto 0;
+      width:min(960px, calc(100% - 34px));
+      margin:10px auto 0;
       padding:10px;
       border-radius:999px;
       border:1px solid rgba(185,138,24,.30);
-      background:rgba(255,255,255,.50);
-      backdrop-filter:blur(8px);
-      box-shadow:0 14px 34px rgba(75,61,35,.09);
+      background:rgba(255,255,255,.70);
+      backdrop-filter:blur(12px);
+      box-shadow:0 18px 42px rgba(75,61,35,.14);
       display:flex;
       gap:10px;
       overflow-x:auto;
@@ -667,37 +663,73 @@
     }
 
     .bottom-nav::-webkit-scrollbar{height:7px}
-    .bottom-nav::-webkit-scrollbar-track{background:rgba(255,255,255,.28);border-radius:999px}
+    .bottom-nav::-webkit-scrollbar-track{background:rgba(255,255,255,.35);border-radius:999px}
     .bottom-nav::-webkit-scrollbar-thumb{background:linear-gradient(90deg,var(--gold2),var(--gold));border-radius:999px}
 
     .bottom-nav a{
       flex:0 0 auto;
       scroll-snap-align:center;
       text-decoration:none;
-      color:#7b560c;
+      color:#b98a18;
       font-family:'Cinzel',serif;
-      font-weight:900;
+      font-weight:700;
       font-size:.82rem;
-      padding:11px 16px;
+      letter-spacing:.035em;
+      text-transform:uppercase;
+      padding:10px 14px;
       border-radius:999px;
-      border:1px solid rgba(185,138,24,.34);
-      background:rgba(255,255,255,.66);
+      border:none;
+      background:transparent;
+      box-shadow:none;
       white-space:nowrap;
-      transition:transform .2s ease, background .2s ease;
+      transition:color .2s ease, transform .2s ease;
     }
 
     .bottom-nav a:hover,
-    .bottom-nav a:focus-visible{
-      transform:translateY(-2px);
-      background:rgba(255,255,255,.86);
+    .bottom-nav a:focus-visible,
+    .bottom-nav a.active{
+      color:#8a6211;
+      background:transparent;
+      border:none;
+      box-shadow:none;
+      transform:translateY(-1px);
       outline:none;
     }
 
     .footer{
-      padding:28px 18px 44px;
+      padding:28px 18px 92px;
+      border-top:1px solid rgba(185,138,24,.18);
+      background:rgba(255,255,255,.88);
       color:#5e594f;
-      font-size:.88rem;
+      font-size:.90rem;
       text-align:center;
+      backdrop-filter:blur(8px);
+    }
+
+    .footer img{
+      width:76px;
+      opacity:.88;
+      margin-bottom:10px;
+    }
+
+    .footer p{
+      margin:6px 0;
+    }
+
+    .footer-links{
+      margin-top:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a{
+      color:#7b560c;
+      text-decoration:none;
+      border-bottom:1px solid rgba(185,138,24,.28);
+      font-weight:700;
     }
 
     .seo-hidden{
@@ -888,7 +920,7 @@
       <nav class="bottom-nav" aria-label="Navigation bas de page">
         <a href="index.html">Accueil</a>
         <a href="domaines-activite.html">Notre domaine d'activité</a>
-        <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+        <a class="active" href="qui-sommes-nous.html">Qui sommes-nous</a>
         <a href="contact.html">Contact</a>
         <a href="partenaires.html">Partenaires</a>
         <a href="foire-aux-questions.html">FAQ</a>
@@ -909,8 +941,14 @@
     </main>
 
     <footer class="footer">
+      <img src="logocir.PNG" alt="Sceau Miternique Group">
       <p>© 2026 Miternique Group — Plomberie • Sanitaire • Chauffage • Dépannage</p>
       <p>Suisse & France — contact@miterniquegroup.com</p>
+      <nav class="footer-links" aria-label="Liens utiles">
+        <a href="cookies.html">Cookies</a>
+        <a href="foire-aux-questions.html">Foire aux questions</a>
+        <a href="donnees-legales.html">Données légales</a>
+      </nav>
     </footer>
   </div>
 
