@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Foire aux questions | Miternique Group</title>
+
+<meta name="description" content="Foire aux questions Miternique Group - Page en préparation.">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --gold:#b98a18;
+ --gold2:#d7ad45;
+ --blue:#174a7c;
+ --ink:#1d1b16;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+ margin:0;
+ min-height:100%;
+ font-family:'Lato',sans-serif;
+ color:var(--ink);
+}
+
+body{
+ overflow:hidden;
+ background:#f7f3ea;
+}
+
+.bg-slideshow{
+ position:fixed;
+ inset:0;
+ z-index:-5;
+}
+
+.bg-slideshow span{
+ position:absolute;
+ inset:0;
+ opacity:0;
+ background-position:center;
+ background-size:cover;
+ background-repeat:no-repeat;
+ animation:bgFade 180s infinite;
+}
+
+.bg-slideshow span:nth-child(1){background-image:url("salle1.jfif");animation-delay:0s}
+.bg-slideshow span:nth-child(2){background-image:url("salle2.jfif");animation-delay:18s}
+.bg-slideshow span:nth-child(3){background-image:url("salle3.jfif");animation-delay:36s}
+.bg-slideshow span:nth-child(4){background-image:url("salle4.jfif");animation-delay:54s}
+.bg-slideshow span:nth-child(5){background-image:url("salle5.jfif");animation-delay:72s}
+.bg-slideshow span:nth-child(6){background-image:url("salle6.jfif");animation-delay:90s}
+.bg-slideshow span:nth-child(7){background-image:url("salle7.jfif");animation-delay:108s}
+.bg-slideshow span:nth-child(8){background-image:url("salle8.jfif");animation-delay:126s}
+.bg-slideshow span:nth-child(9){background-image:url("salle9.jfif");animation-delay:144s}
+.bg-slideshow span:nth-child(10){background-image:url("salle10.jfif");animation-delay:162s}
+
+@keyframes bgFade{
+0%{opacity:0}
+4%{opacity:1}
+10%{opacity:1}
+14%{opacity:0}
+100%{opacity:0}
+}
+
+.frame{
+ position:fixed;
+ inset:14px;
+ border:2px solid rgba(185,138,24,.34);
+ border-radius:28px;
+ pointer-events:none;
+}
+
+.viewport{
+ height:100vh;
+ overflow:auto;
+ padding:30px;
+}
+
+.logo{
+ text-align:center;
+}
+
+.logo img{
+ max-width:520px;
+ width:100%;
+}
+
+.card{
+ max-width:900px;
+ margin:40px auto;
+ background:rgba(255,255,255,.86);
+ padding:50px;
+ border-radius:30px;
+ text-align:center;
+}
+
+h1{
+ font-family:'Cinzel',serif;
+ color:#8a6211;
+}
+
+.bottom-nav{
+ display:flex;
+ gap:20px;
+ overflow-x:auto;
+ white-space:nowrap;
+ justify-content:center;
+ padding:18px;
+}
+
+.bottom-nav a{
+ text-decoration:none;
+ color:#b98a18;
+ font-family:'Cinzel',serif;
+ font-weight:700;
+}
+
+.footer{
+ text-align:center;
+ padding:30px;
+}
+
+.footer img{
+ width:80px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-slideshow">
+<span></span><span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="frame"></div>
+
+<div class="viewport">
+
+<div class="logo">
+<img src="logo.PNG" alt="Miternique Group">
+</div>
+
+<div class="card">
+<h1>Foire aux questions</h1>
+
+<p>Cette page est actuellement en préparation.</p>
+
+<p>
+Miternique Group travaille à la mise en ligne prochaine d'une foire aux questions regroupant les interrogations les plus fréquentes concernant nos prestations de plomberie, sanitaire, chauffage et dépannage en Suisse et en France.
+</p>
+
+<p>Nous vous remercions de votre compréhension.</p>
+</div>
+
+<nav class="bottom-nav">
+<a href="index.html">Accueil</a>
+<a href="domaines_activite_miternique.html">Notre domaine d'activité</a>
+<a href="qui_sommes_nous_miternique.html">Qui sommes-nous</a>
+<a href="contact.html">Contact</a>
+<a href="partenaires.html">Partenaires</a>
+</nav>
+
+<footer class="footer">
+<img src="logocir.PNG" alt="">
+<p>© 2026 Miternique Group</p>
+</footer>
+
+</div>
+</body>
+</html>
