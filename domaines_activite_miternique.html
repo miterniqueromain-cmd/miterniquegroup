@@ -713,14 +713,25 @@
       white-space:nowrap;
     }
 
-    .bottom-scrollbar a.active,
-    .bottom-scrollbar a:hover,
-    .bottom-scrollbar a:focus-visible{
-      color:#1d1b16;
-      background:linear-gradient(135deg, #f0d98e, var(--gold2));
-      outline:none;
-    }
+  .bottom-scrollbar a{
+    flex:0 0 auto;
+    text-decoration:none;
+    color:#b98a18;
+    font-family:'Cinzel',serif;
+    font-weight:700;
+    background:transparent;
+    border:none;
+    box-shadow:none;
+}
 
+.bottom-scrollbar a.active,
+.bottom-scrollbar a:hover,
+.bottom-scrollbar a:focus-visible{
+    color:#8a6211;
+    background:transparent;
+    border:none;
+    box-shadow:none;
+}
     .footer{
       padding:28px 18px 92px;
       border-top:1px solid rgba(185,138,24,.18);
