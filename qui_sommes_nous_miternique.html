@@ -426,22 +426,22 @@
     .container{
       width:min(1040px, calc(100% - 34px));
       margin:0 auto;
-      padding:118px 0 96px;
+      padding:88px 0 96px;
       min-height:100vh;
     }
 
     .hero-card{
       width:100%;
       max-width:960px;
-      margin:0 auto 22px;
-      padding:22px;
+      margin:10px auto 22px;
+      padding:20px;
       border:1px solid rgba(255,255,255,.38);
       border-radius:34px;
       background:rgba(255,255,255,.24);
       box-shadow:var(--shadow);
       backdrop-filter:blur(3px);
       display:grid;
-      grid-template-columns:340px 1fr;
+      grid-template-columns:minmax(240px, 300px) 1fr;
       gap:24px;
       align-items:center;
       text-align:left;
@@ -449,6 +449,7 @@
 
     .portrait{
       width:100%;
+      max-height:335px;
       border-radius:24px;
       border:1px solid rgba(185,138,24,.26);
       overflow:hidden;
@@ -458,8 +459,11 @@
 
     .portrait img{
       width:100%;
+      height:100%;
+      max-height:335px;
       display:block;
       object-fit:cover;
+      object-position:center top;
     }
 
     .hero-text img.logo{
@@ -525,24 +529,30 @@
       transition:transform .2s ease, background .2s ease, box-shadow .2s ease;
     }
 
-    .btn.gold{
-      background:linear-gradient(135deg,#f0d98e,var(--gold2));
-      color:#1d1b16;
-      border:1px solid rgba(185,138,24,.36);
-      box-shadow:0 16px 38px rgba(185,138,24,.18);
+    .btn.gold,
+    .btn.dark{
+      color:#6f4f0e;
+      background:rgba(255,255,255,.54);
+      border:1px solid rgba(185,138,24,.30);
+      backdrop-filter:blur(8px);
+      box-shadow:0 12px 28px rgba(75,61,35,.08);
     }
 
-    .btn.dark{
-      color:#1d1b16;
-      background:rgba(255,255,255,.72);
-      border:1px solid rgba(185,138,24,.42);
-      backdrop-filter:blur(6px);
+    .btn.gold::after,
+    .btn.dark::after{
+      content:"›";
+      margin-left:10px;
+      color:#9a6d12;
+      font-size:1.15rem;
+      line-height:1;
     }
 
     .btn:hover,
     .btn:focus-visible{
       transform:translateY(-2px);
-      box-shadow:0 18px 38px rgba(75,61,35,.16);
+      background:rgba(255,255,255,.82);
+      border-color:rgba(185,138,24,.58);
+      box-shadow:0 16px 34px rgba(75,61,35,.14);
       outline:none;
     }
 
@@ -602,21 +612,21 @@
       font-weight:800;
     }
 
-    .cv-grid{
+    .expertise-grid{
       display:grid;
       grid-template-columns:repeat(2,1fr);
       gap:14px;
       margin-top:14px;
     }
 
-    .cv-card{
+    .expertise-card{
       padding:16px;
       border-radius:18px;
       border:1px solid rgba(185,138,24,.26);
       background:rgba(255,255,255,.32);
     }
 
-    .cv-card ul{
+    .expertise-card ul{
       margin:8px 0 0;
       padding:0;
       list-style:none;
@@ -624,13 +634,13 @@
       gap:7px;
     }
 
-    .cv-card li{
+    .expertise-card li{
       position:relative;
       padding-left:22px;
       color:#514b42;
     }
 
-    .cv-card li::before{
+    .expertise-card li::before{
       content:"✓";
       position:absolute;
       left:0;
@@ -701,17 +711,19 @@
 
     @media (max-width: 920px){
       .translate-bar{top:0}
-      .container{padding-top:128px}
+      .container{padding-top:112px}
       .hero-card{grid-template-columns:1fr;text-align:center}
+      .portrait{max-width:420px;margin:0 auto;max-height:320px}
+      .portrait img{max-height:320px}
       .hero-text img.logo{margin:0 auto 18px}
       .direct-actions{justify-content:center}
-      .values-grid,.cv-grid{grid-template-columns:1fr}
+      .values-grid,.expertise-grid{grid-template-columns:1fr}
     }
 
     @media (max-width: 620px){
       .frame-fixed{inset:10px;border-radius:20px}
       .viewport-scroll{inset:18px}
-      .container{width:min(100% - 22px, 1040px);padding-top:125px}
+      .container{width:min(100% - 22px, 1040px);padding-top:110px}
       .hero-card,.panel,.intro-note{padding:18px}
       .hero-text img.logo{width:min(220px,60vw);max-width:220px}
       .btn{width:100%}
@@ -753,9 +765,9 @@
           <img class="logo" src="logo.PNG" alt="Logo Miternique Group">
           <h1>Qui sommes-nous ?</h1>
           <p class="subtitle">
-            Miternique Group est une entreprise à taille humaine portée par Romain Miternique :
-            artisan plombier chauffagiste, entrepreneur et professionnel de terrain, avec un parcours construit
-            autour du sanitaire, du chauffage, du dépannage et de la gestion d'interventions techniques.
+            Miternique Group réunit une expérience solide de terrain, une exigence artisanale et une organisation claire
+            entre la France et la Suisse. L'objectif est simple : proposer une entreprise sérieuse, identifiable et fiable
+            pour la plomberie, le sanitaire, le chauffage et le dépannage.
           </p>
 
           <div class="direct-actions">
@@ -766,65 +778,60 @@
       </section>
 
       <p class="intro-note">
-        Ici, le plus important n'est pas seulement le nom de l'entreprise : c'est la personne qui intervient,
-        analyse, conseille et engage sa responsabilité. Miternique Group repose sur une logique simple :
-        une relation directe, une parole claire, une intervention propre et une exigence identique en Suisse et en France.
+        Miternique Group repose sur une idée simple : une entreprise propre, sérieuse et expérimentée, avec une parole claire,
+        un travail soigné et une exigence identique de chaque côté de la frontière. L'activité est organisée autour de deux
+        entreprises bien distinctes : une structure déclarée en France pour les interventions françaises, et une structure
+        déclarée en Suisse pour les interventions suisses.
       </p>
 
-      <section class="panel" aria-label="Parcours de Romain Miternique">
-        <h2>Un parcours construit sur le terrain</h2>
+      <section class="panel" aria-label="Deux entreprises distinctes Miternique Group">
+        <h2>Deux entreprises distinctes, une même exigence</h2>
         <p>
-          Le parcours de Romain Miternique s'appuie sur une expérience longue et concrète dans les métiers
-          de la plomberie, du sanitaire, du chauffage et du dépannage. Cette expérience s'est construite progressivement :
-          formation technique, discipline professionnelle, interventions réelles, responsabilité d'équipe,
-          gestion de chantier, diagnostic et relation directe avec les clients.
+          Le choix de fonctionner avec deux entreprises séparées est volontaire. La structure française intervient pour les
+          demandes situées en France et relève du cadre administratif français. La structure suisse intervient pour les
+          demandes situées en Suisse et relève du cadre administratif suisse. Cette séparation permet de travailler proprement,
+          clairement et légalement de chaque côté de la frontière.
         </p>
 
         <div class="timeline">
           <div class="step">
-            <strong>Formation technique et base métier</strong>
-            Apprentissage des fondamentaux du sanitaire, de la plomberie, des installations techniques,
-            des règles de pose, de réparation et de sécurité.
+            <strong>Structure France</strong>
+            Une entreprise déclarée en France, destinée aux interventions françaises, notamment en Haute-Savoie, Orcier
+            et secteurs voisins. L'activité française s'inscrit dans une continuité d'expérience indépendante depuis les
+            années 2000, avec une première immatriculation indiquée autour de 2008.
           </div>
 
           <div class="step">
-            <strong>Rigueur, discipline et sens des responsabilités</strong>
-            Un parcours marqué par la rigueur, l'organisation et la capacité à intervenir dans des situations
-            où la précision et le sérieux comptent.
+            <strong>Structure Suisse</strong>
+            Une entreprise déclarée en Suisse, destinée aux interventions suisses, notamment dans le canton de Genève,
+            Bernex et les communes voisines. Elle répond aux demandes locales avec le même niveau de sérieux et de finition.
           </div>
 
           <div class="step">
-            <strong>Entrepreneuriat et expérience indépendante</strong>
-            Création et développement d'une activité indépendante, avec la nécessité de gérer à la fois
-            la technique, les clients, les délais, les devis, les urgences et la qualité finale du travail.
+            <strong>Une organisation claire pour le client</strong>
+            Selon le lieu d'intervention, la demande est orientée vers la bonne structure. Le client sait ainsi que son dossier
+            est traité dans le bon cadre, avec le bon interlocuteur, les bonnes coordonnées et la bonne organisation.
           </div>
 
           <div class="step">
-            <strong>Chef d'équipe et responsable dépannage</strong>
-            Expérience en encadrement, suivi d'interventions, organisation de chantier, résolution de pannes,
-            accompagnement client et coordination technique.
-          </div>
-
-          <div class="step">
-            <strong>Miternique Group aujourd'hui</strong>
-            Une entreprise concentrée sur l'essentiel : plomberie, sanitaire, chauffage et dépannage,
-            avec une même exigence de qualité en Suisse et en France.
+            <strong>Plus de 20 ans d'expérience</strong>
+            L'expérience s'est construite à la fois auprès d'employeurs et à notre compte, dans des situations concrètes :
+            dépannage, chantier, rénovation, entretien, sanitaire, chauffage, recherche de panne et intervention chez les clients.
           </div>
         </div>
       </section>
 
-      <section class="panel" aria-label="Expérience et compétences">
-        <h2>Expérience & compétences</h2>
+      <section class="panel" aria-label="Expérience et savoir-faire Miternique Group">
+        <h2>Une belle entreprise d'expérience</h2>
         <p>
-          Le CV professionnel de Romain Miternique met en avant une progression cohérente :
-          intervention terrain, dépannage, responsabilité, gestion d'équipe, organisation et exigence artisanale.
-          Cette combinaison donne à Miternique Group une identité précise : une entreprise humaine, mais structurée ;
-          artisanale, mais exigeante ; réactive, mais attentive à la durabilité.
+          Miternique Group met en avant une expérience concrète, construite sur le terrain et dans la durée. L'entreprise
+          connaît les réalités du métier : les urgences, les fuites, les installations anciennes, les contraintes d'accès,
+          les chantiers habités, les attentes des clients et l'importance d'une intervention propre.
         </p>
 
-        <div class="cv-grid">
-          <div class="cv-card">
-            <h3>Compétences métier</h3>
+        <div class="expertise-grid">
+          <div class="expertise-card">
+            <h3>Savoir-faire technique</h3>
             <ul>
               <li>Plomberie et réparations techniques</li>
               <li>Sanitaire et installations de salle de bain</li>
@@ -834,14 +841,14 @@
             </ul>
           </div>
 
-          <div class="cv-card">
-            <h3>Responsabilités</h3>
+          <div class="expertise-card">
+            <h3>Organisation professionnelle</h3>
             <ul>
-              <li>Gestion d'interventions</li>
-              <li>Organisation de chantier</li>
-              <li>Responsabilité dépannage</li>
-              <li>Encadrement et suivi d'équipe</li>
-              <li>Relation client et conseil technique</li>
+              <li>Interventions en France et en Suisse</li>
+              <li>Deux structures bien distinctes</li>
+              <li>Conseil clair avant intervention</li>
+              <li>Travail propre et soigné</li>
+              <li>Relation directe avec le client</li>
             </ul>
           </div>
         </div>
@@ -866,9 +873,9 @@
       <section class="panel" aria-label="Pourquoi choisir Miternique Group">
         <h2>Pourquoi choisir Miternique Group ?</h2>
         <p>
-          Parce que l'entreprise ne se limite pas à une page internet ou à un numéro de téléphone.
-          Elle repose sur une personne identifiable, un parcours réel, une expérience de terrain et une exigence
-          professionnelle. Le client sait à qui il s'adresse, pour quel type de travaux, avec quel niveau de sérieux.
+          Parce que l'entreprise repose sur une organisation claire, deux structures déclarées selon le pays d'intervention,
+          une expérience solide et une exigence de qualité constante. Le client sait à qui il s'adresse, dans quel cadre
+          l'intervention est réalisée et avec quel niveau de sérieux.
         </p>
 
         <p>
@@ -891,12 +898,12 @@
       <section class="seo-hidden" aria-hidden="true">
         <h2>Qui sommes-nous Miternique Group Romain Miternique artisan plombier chauffagiste Suisse France</h2>
         <p>
-          Miternique Group est porté par Romain Miternique, artisan plombier chauffagiste et professionnel de terrain.
-          Parcours en plomberie, sanitaire, chauffage, dépannage, gestion d'équipe, chef d'équipe, responsable dépannage,
-          organisation de chantier, diagnostic technique, relation client, rénovation de salle de bain, recherche de fuite,
-          réparation sanitaire, chauffage hydraulique, radiateur, chaudière, installation sanitaire, intervention Genève,
-          Bernex, Haute-Savoie, Orcier, Suisse et France. Plus de 25 ans d'expérience, deux structures, une même exigence
-          de qualité, entreprise à taille humaine, confiance, rigueur, propreté, responsabilité, intervention technique.
+          Miternique Group présente deux entreprises distinctes : une structure française déclarée en France pour les interventions
+          en France, et une structure suisse déclarée en Suisse pour les interventions en Suisse. L'entreprise met en avant plus
+          de 20 ans d'expérience dans la plomberie, le sanitaire, le chauffage, le dépannage, la rénovation de salle de bain,
+          la recherche de fuite, la réparation sanitaire, le chauffage hydraulique, les radiateurs, les chaudières, les installations
+          sanitaires, Genève, Bernex, Haute-Savoie, Orcier, Suisse et France. Une même exigence de qualité, une entreprise à taille
+          humaine, confiance, rigueur, propreté, responsabilité et intervention technique.
         </p>
       </section>
     </main>
