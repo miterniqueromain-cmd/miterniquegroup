@@ -543,13 +543,22 @@
       transition:transform .2s ease, background .2s ease, box-shadow .2s ease;
     }
 
-    .btn.gold{
-      color:#1d1b16;
-      background:linear-gradient(135deg, #f0d98e, var(--gold2));
-      box-shadow:0 16px 38px rgba(185,138,24,.18);
-      border:1px solid rgba(185,138,24,.36);
-    }
+  .btn.gold{
+  color:#1f4e8c;
+  background:rgba(255,255,255,.96);
+  border:2px solid #b98a18;
+  box-shadow:0 10px 25px rgba(185,138,24,.10);
+  backdrop-filter:blur(6px);
+}
 
+.btn.gold:hover,
+.btn.gold:focus-visible{
+  color:#143a69;
+  background:#ffffff;
+  border-color:#d7ad45;
+  box-shadow:0 16px 35px rgba(185,138,24,.18);
+  transform:translateY(-2px);
+}
     .btn.dark{
       color:#1d1b16;
       background:rgba(255,255,255,.72);
@@ -662,11 +671,8 @@
     }
 
     .bottom-scrollbar{
-      position:sticky;
-      bottom:18px;
-      z-index:40;
-      width:min(920px, 100%);
-      margin:28px auto 0;
+      width:min(920px, calc(100% - 34px));
+      margin:10px auto 0;
       border-radius:999px;
       border:1px solid rgba(185,138,24,.34);
       background:rgba(255,255,255,.70);
@@ -716,10 +722,39 @@
     }
 
     .footer{
-      padding:28px 18px 44px;
+      padding:28px 18px 92px;
+      border-top:1px solid rgba(185,138,24,.18);
+      background:rgba(255,255,255,.88);
       color:#5e594f;
-      font-size:.88rem;
+      font-size:.90rem;
       text-align:center;
+      backdrop-filter:blur(8px);
+    }
+
+    .footer img{
+      width:76px;
+      opacity:.88;
+      margin-bottom:10px;
+    }
+
+    .footer p{
+      margin:6px 0;
+    }
+
+    .footer-links{
+      margin-top:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a{
+      color:#7b560c;
+      text-decoration:none;
+      border-bottom:1px solid rgba(185,138,24,.28);
+      font-weight:700;
     }
 
     .seo-hidden{
@@ -783,8 +818,8 @@
 
         <div class="direct-actions">
           <a class="btn gold" href="contact.html">Demander une intervention</a>
-          <a class="btn dark" href="tel:+41762042013">Appeler Suisse</a>
-          <a class="btn dark" href="tel:+33744828970">Appeler France</a>
+         <a class="btn gold" href="tel:+41762042013">Appeler Suisse</a>
+<a class="btn gold" href="tel:+33744828970">Appeler France</a>
         </div>
       </section>
 
@@ -888,19 +923,6 @@
         </div>
       </section>
 
-      <div class="bottom-scrollbar" aria-label="Navigation bas de page coulissante">
-        <nav>
-          <a href="index.html">Accueil</a>
-          <a class="active" href="domaines-activite.html">Notre domaine d'activité</a>
-          <a href="qui-sommes-nous.html">Qui sommes-nous</a>
-          <a href="contact.html">Contact</a>
-          <a href="partenaires.html">Partenaires</a>
-          <a href="foire-aux-questions.html">FAQ</a>
-          <a href="cookies.html">Cookies</a>
-          <a href="donnees-legales.html">Données légales</a>
-        </nav>
-      </div>
-
       <section class="seo-hidden" aria-hidden="true">
         <h2>Notre domaine d'activité plombier chauffagiste Suisse France Genève Haute-Savoie</h2>
         <p>
@@ -914,9 +936,28 @@
       </section>
     </main>
 
+      <div class="bottom-scrollbar" aria-label="Navigation bas de page coulissante">
+        <nav>
+          <a href="index.html">Accueil</a>
+          <a class="active" href="domaines-activite.html">Notre domaine d'activité</a>
+          <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+          <a href="contact.html">Contact</a>
+          <a href="partenaires.html">Partenaires</a>
+          <a href="foire-aux-questions.html">FAQ</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="donnees-legales.html">Données légales</a>
+        </nav>
+      </div>
+
     <footer class="footer">
+      <img src="logocir.PNG" alt="Sceau Miternique Group">
       <p>© 2026 Miternique Group — Plomberie • Sanitaire • Chauffage • Dépannage</p>
       <p>Suisse & France — contact@miterniquegroup.com</p>
+      <nav class="footer-links" aria-label="Liens utiles">
+        <a href="cookies.html">Cookies</a>
+        <a href="foire-aux-questions.html">Foire aux questions</a>
+        <a href="donnees-legales.html">Données légales</a>
+      </nav>
     </footer>
   </div>
 
