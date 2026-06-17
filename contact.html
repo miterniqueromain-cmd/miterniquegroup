@@ -852,7 +852,42 @@
       *,*::before,*::after{animation:none !important;transition:none !important}
       .bg-slideshow span:first-child{opacity:1}
     }
+.contact-scrollbar{
+    width:min(920px,100%);
+    margin:22px auto 0;
+    display:flex;
+    gap:22px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    padding:14px 20px;
+    border-top:1px solid rgba(185,138,24,.20);
+    border-bottom:1px solid rgba(185,138,24,.20);
+}
 
+.contact-scrollbar::-webkit-scrollbar{
+    height:5px;
+}
+
+.contact-scrollbar::-webkit-scrollbar-thumb{
+    background:rgba(185,138,24,.30);
+    border-radius:999px;
+}
+
+.contact-scrollbar a{
+    flex:0 0 auto;
+    text-decoration:none;
+    font-family:'Cinzel',serif;
+    font-weight:700;
+    color:#b98a18;
+    background:transparent;
+    border:none;
+    box-shadow:none;
+}
+
+.contact-scrollbar a:hover{
+    color:#8a6211;
+}
   </style>
 </head>
 
@@ -880,13 +915,15 @@
           Pour une urgence, un dépannage, une demande de devis, une rénovation sanitaire,
           une intervention chauffage ou une question technique en Suisse ou en France.
         </p>
-
-        <div class="direct-actions">
-          <a class="btn gold" href="tel:+41762042013">Appeler Suisse</a>
-          <a class="btn gold" href="tel:+33744828970">Appeler France</a>
-          <a class="btn dark" href="https://wa.me/41762042013">WhatsApp</a>
-          <a class="btn dark" href="mailto:contact@miterniquegroup.com">E-mail</a>
-        </div>
+<nav class="contact-scrollbar" aria-label="Contacts rapides">
+    <a href="tel:+41762042013">Appeler Suisse</a>
+    <a href="tel:+33744828970">Appeler France</a>
+    <a href="https://wa.me/41762042013">WhatsApp</a>
+    <a href="mailto:contact@miterniquegroup.com">E-mail</a>
+    <a href="https://maps.google.com/?q=Bernex-en-Combes+31+1233+Bernex">Suisse</a>
+    <a href="https://maps.google.com/?q=533+Route+des+Grands+Champs+74550+Orcier">France</a>
+</nav>
+      
       </section>
 
       <section class="info-grid" aria-label="Coordonnées Miternique Group">
