@@ -333,29 +333,28 @@
       background:#f7f3ea;
     }
 
-    .bg-slideshow span{
-      position:absolute;
-      inset:0;
-      opacity:0;
-      background-position:center;
-      background-size:cover;
-      background-repeat:no-repeat;
-      animation:bgFade 60s infinite;
-      filter:saturate(.96) contrast(1.02) brightness(1.08);
-      transform:scale(1.035);
-    }
+  .bg-slideshow span{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    animation:bgFade 180s infinite;
+    filter:saturate(.96) contrast(1.02) brightness(1.08);
+    transform:scale(1.035);
+}
 
-    .bg-slideshow span:nth-child(1){background-image:url("salle1.jfif");animation-delay:0s}
-    .bg-slideshow span:nth-child(2){background-image:url("salle2.jfif");animation-delay:6s}
-    .bg-slideshow span:nth-child(3){background-image:url("salle3.jfif");animation-delay:12s}
-    .bg-slideshow span:nth-child(4){background-image:url("salle4.jfif");animation-delay:18s}
-    .bg-slideshow span:nth-child(5){background-image:url("salle5.jfif");animation-delay:24s}
-    .bg-slideshow span:nth-child(6){background-image:url("salle6.jfif");animation-delay:30s}
-    .bg-slideshow span:nth-child(7){background-image:url("salle7.jfif");animation-delay:36s}
-    .bg-slideshow span:nth-child(8){background-image:url("salle8.jfif");animation-delay:42s}
-    .bg-slideshow span:nth-child(9){background-image:url("salle9.jfif");animation-delay:48s}
-    .bg-slideshow span:nth-child(10){background-image:url("salle10.jfif");animation-delay:54s}
-
+.bg-slideshow span:nth-child(1){background-image:url("salle1.jfif");animation-delay:0s}
+.bg-slideshow span:nth-child(2){background-image:url("salle2.jfif");animation-delay:18s}
+.bg-slideshow span:nth-child(3){background-image:url("salle3.jfif");animation-delay:36s}
+.bg-slideshow span:nth-child(4){background-image:url("salle4.jfif");animation-delay:54s}
+.bg-slideshow span:nth-child(5){background-image:url("salle5.jfif");animation-delay:72s}
+.bg-slideshow span:nth-child(6){background-image:url("salle6.jfif");animation-delay:90s}
+.bg-slideshow span:nth-child(7){background-image:url("salle7.jfif");animation-delay:108s}
+.bg-slideshow span:nth-child(8){background-image:url("salle8.jfif");animation-delay:126s}
+.bg-slideshow span:nth-child(9){background-image:url("salle9.jfif");animation-delay:144s}
+.bg-slideshow span:nth-child(10){background-image:url("salle10.jfif");animation-delay:162s}
     @keyframes bgFade{
       0%{opacity:0;transform:scale(1.035)}
       4%{opacity:1}
