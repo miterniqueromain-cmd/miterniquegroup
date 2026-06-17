@@ -384,27 +384,27 @@
       background-position:center;
       background-size:cover;
       background-repeat:no-repeat;
-      animation:bgFade 20s infinite;
+      animation:bgFade 60s infinite;
       filter:saturate(.96) contrast(1.02) brightness(1.08);
       transform:scale(1.035);
     }
 
     .bg-slideshow span:nth-child(1){background-image:url("salle1.jfif");animation-delay:0s}
-    .bg-slideshow span:nth-child(2){background-image:url("salle2.jfif");animation-delay:2s}
-    .bg-slideshow span:nth-child(3){background-image:url("salle3.jfif");animation-delay:4s}
-    .bg-slideshow span:nth-child(4){background-image:url("salle4.jfif");animation-delay:6s}
-    .bg-slideshow span:nth-child(5){background-image:url("salle5.jfif");animation-delay:8s}
-    .bg-slideshow span:nth-child(6){background-image:url("salle6.jfif");animation-delay:10s}
-    .bg-slideshow span:nth-child(7){background-image:url("salle7.jfif");animation-delay:12s}
-    .bg-slideshow span:nth-child(8){background-image:url("salle8.jfif");animation-delay:14s}
-    .bg-slideshow span:nth-child(9){background-image:url("salle9.jfif");animation-delay:16s}
-    .bg-slideshow span:nth-child(10){background-image:url("salle10.jfif");animation-delay:18s}
+    .bg-slideshow span:nth-child(2){background-image:url("salle2.jfif");animation-delay:6s}
+    .bg-slideshow span:nth-child(3){background-image:url("salle3.jfif");animation-delay:12s}
+    .bg-slideshow span:nth-child(4){background-image:url("salle4.jfif");animation-delay:18s}
+    .bg-slideshow span:nth-child(5){background-image:url("salle5.jfif");animation-delay:24s}
+    .bg-slideshow span:nth-child(6){background-image:url("salle6.jfif");animation-delay:30s}
+    .bg-slideshow span:nth-child(7){background-image:url("salle7.jfif");animation-delay:36s}
+    .bg-slideshow span:nth-child(8){background-image:url("salle8.jfif");animation-delay:42s}
+    .bg-slideshow span:nth-child(9){background-image:url("salle9.jfif");animation-delay:48s}
+    .bg-slideshow span:nth-child(10){background-image:url("salle10.jfif");animation-delay:54s}
 
     @keyframes bgFade{
       0%{opacity:0;transform:scale(1.035)}
-      6%{opacity:1}
-      14%{opacity:1}
-      22%{opacity:0;transform:scale(1.08)}
+      4%{opacity:1}
+      10%{opacity:1}
+      14%{opacity:0;transform:scale(1.08)}
       100%{opacity:0;transform:scale(1.08)}
     }
 
@@ -565,10 +565,10 @@ body::after{
       align-items:center;
       padding:28px 18px;
       border-radius:34px;
-      background:rgba(255,255,255,.38);
-      border:1px solid rgba(255,255,255,.55);
-      backdrop-filter:blur(5px);
-      box-shadow:0 30px 90px rgba(75,61,35,.10);
+      background:rgba(255,255,255,.24);
+      border:1px solid rgba(255,255,255,.38);
+      backdrop-filter:blur(3px);
+      box-shadow:0 24px 70px rgba(75,61,35,.08);
     }
 
     .logo-seal{
@@ -616,7 +616,7 @@ body::after{
       border:1px solid rgba(185,138,24,.36);
       border-radius:999px;
       background:rgba(255,255,255,.64);
-      backdrop-filter:blur(10px);
+      backdrop-filter:blur(6px);
       color:#8a6211;
       font-family:'Cinzel',serif;
       font-size:.80rem;
@@ -683,7 +683,7 @@ body::after{
       color:#1d1b16;
       background:rgba(255,255,255,.72);
       border:1px solid rgba(185,138,24,.42);
-      backdrop-filter:blur(10px);
+      backdrop-filter:blur(6px);
     }
 
     .btn:hover,.btn:focus-visible{
@@ -707,21 +707,21 @@ body::after{
       padding:18px;
       border-radius:22px;
       border:1px solid rgba(185,138,24,.32);
-      background:rgba(255,255,255,.62);
-      box-shadow:0 18px 44px rgba(75,61,35,.12);
+      background:rgba(255,255,255,.38);
+      box-shadow:0 14px 34px rgba(75,61,35,.09);
       text-decoration:none;
       display:flex;
       flex-direction:column;
       align-items:center;
       justify-content:center;
-      backdrop-filter:blur(10px);
+      backdrop-filter:blur(6px);
       transition:transform .2s ease, border-color .2s ease, background .2s ease;
     }
 
     .tile:hover,.tile:focus-visible{
       transform:translateY(-4px);
       border-color:rgba(185,138,24,.68);
-      background:rgba(255,255,255,.82);
+      background:rgba(255,255,255,.55);
       outline:none;
     }
 
